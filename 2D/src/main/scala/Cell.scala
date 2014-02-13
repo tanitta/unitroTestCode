@@ -9,6 +9,7 @@ class Cell(){
 	var air:Double = 0.0;
 	var nutP:Double = 0.0;
 	var nutN:Double = 0.0;
-	var plant = new plants.BasePlant;
-	var seed = ""
+	var brightness:Double = 0.0;
+	var plant = new plants.BasePlant(0,0);
+	var item =new items.BaseItem(0,0);
 }

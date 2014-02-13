@@ -1,7 +1,9 @@
 package trit.unitro2d.plants
 import trit.unitro2d._
-class BasePlant(){
-	var planttype = "BasePlant"
+import processing.core._
+
+class BasePlant(var x:Int, var y:Int){
+	var objectName = "BasePlant"
 	var nutP:Double = 0.0
 	var nutN:Double = 0.0
 	var water:Double = 0.0
@@ -10,5 +12,5 @@ class BasePlant(){
 	
 	def setup(){}
 	def update(){}
-	def draw(){}
+	def draw(ps: PApplet){}
 }
