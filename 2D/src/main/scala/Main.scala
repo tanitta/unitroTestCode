@@ -32,11 +32,11 @@ object Main extends processing.core.PApplet {
 		// Zone.nextMatrix(3)(6).item = new items.Seed(3,6)
 		// Zone.nextMatrix(3)(6).item.SetPlantName("aaaa")
 		
-		var a = new plants.BasePlant(3,6)
-		println(a.objectName)
-		a = new plants.Hordeum(3,6)
-		println(a.objectName)
-		println(a.aaaa)
+		// var a = new plants.BasePlant(3,6)
+		// println(a.objectName)
+		// a = new plants.Hordeum(3,6)
+		// println(a.objectName)
+		// println(a.aaaa)
 		
 		// a.aaaa = 2
 		
@@ -49,17 +49,29 @@ object Main extends processing.core.PApplet {
 	}
 
 	def update(){
-		sim.update()		
+		sim.update()	
+		var x = (mouseX/16).toInt
+		var y = ((Env.sizScreenY-mouseY+8)/16).toInt
+		if(mousePressed && 1<=x && x<=Env.sizCellX-2 && 1<=y && y<=Env.sizCellY-2){
+			Zone.nextMatrix(x)(y).soil +=0.02
+		}	
 	}
 	
 	override def draw() = {
 		update	
 		drawer.draw()
+		rectMode(PConstants.RADIUS)
+		noFill()
+		stroke(0,0,100)
+		rect((mouseX/16).toInt*16, (mouseY/16).toInt*16,8,8)
+		println("X : " + (mouseX/16).toInt + "Y : " + ((Env.sizScreenY-mouseY+8)/16).toInt)
 	}
 
 	def main(args: Array[String]){
 		runSketch()
 	}
+	
+	
 	
 	override def sketchFullScreen():Boolean = {
 		return false
