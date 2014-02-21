@@ -1,7 +1,7 @@
 package trit.unitro2d
 object Env{
-	var sizCellX = 10;
-	var sizCellY = 10;
+	var sizCellX = 50;
+	var sizCellY = 20;
 	
 	var sizScreenX = 500;
 	var sizScreenY = 500;
