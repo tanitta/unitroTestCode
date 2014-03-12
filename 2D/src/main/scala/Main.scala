@@ -14,25 +14,47 @@ object Main extends processing.core.PApplet {
 		for( i <- 1 until Env.sizCellX-1) {
 			Zone.nextMatrix(i)(1).soil = 1.0
 		}
-	
+		
+		Zone.nextMatrix(4)(2).soil = 0.5
+		Zone.nextMatrix(5)(2).soil = 0.5
+		Zone.nextMatrix(4)(3).soil = 0.5
+		
+		Zone.nextMatrix(4)(4).soil = 0.7
+		Zone.nextMatrix(5)(4).soil = 0.9
+		Zone.nextMatrix(4)(5).soil = 0.9
+		Zone.nextMatrix(5)(5).soil = 0.7
+		Zone.nextMatrix(4)(5).soil = 0.4
+		Zone.nextMatrix(4)(6).soil = 0.4
+		Zone.nextMatrix(3)(6).soil = 0.3
+
 		// Zone.nextMatrix(3)(6).plant = new plants.Hordeum(3,6)
 		
 		// Zone.nextMatrix(3)(6).item = new items.Seed(3,6)
 		// Zone.nextMatrix(3)(6).item.SetPlantName("aaaa")
 		
+		class MotherHoge{
+			
+		}
+		class SubHoge() extends MotherHoge {
+			
+		}
+		var inst = new MotherHoge
+		println("isInstanceOf?" + inst.isInstanceOf[SubHoge])
+		
 		// var a = new plants.BasePlant(3,6)
 		// println(a.objectName)
+		// println("isInstanceOf?" + a.isInstanceOf[plants.Hordeum])
+		
+		// // a.asInstanceOf[plants.Hordeum]
 		// a = new plants.Hordeum(3,6)
 		// println(a.objectName)
+		
 		// println(a.aaaa)
 		
 		// a.aaaa = 2
 		
 		Zone.nextMatrix(5)(4).soil = 0.4
-		
-		
 		Zone.nextMatrix(3)(3).soil = 0.5
-		
 		Zone.nextMatrix(3)(2).soil = 0.8
 	}
 
