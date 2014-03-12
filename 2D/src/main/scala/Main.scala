@@ -14,8 +14,6 @@ object Main extends processing.core.PApplet {
 		for( i <- 1 until Env.sizCellX-1) {
 			Zone.nextMatrix(i)(1).soil = 1.0
 		}
-	
-		
 		Zone.nextMatrix(4)(2).soil = 0.5
 		Zone.nextMatrix(5)(2).soil = 0.5
 		Zone.nextMatrix(4)(3).soil = 0.5
