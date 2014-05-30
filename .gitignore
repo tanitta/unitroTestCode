@@ -1,5 +1,6 @@
 *.class
 *.gitattributes
+*.ensime
 
 #################
 ## Eclipse
