@@ -1,8 +1,11 @@
-*.class
-*.gitattributes
-*.ensime
-*.jar
-*.xml
+lib/
+doc/
+target/
+project/
+src/main/java/
+*.log
+*.sublime-workspace
+*.sublime-project
 
 #################
 ## Eclipse
