@@ -22,11 +22,61 @@ class Cell{
 		plant.Update
 	}
 	
-	def Draw = {
+	def Draw(x: Int, y: Int, z: Int) = {
 		var ps = Env.ps
 		ps.strokeWeight(1)
 		ps.stroke(50)
-		ps.box(math.pow(soil, 1/3).toFloat)
+		
+		var lockedAxis = 0
+		if(x==4){lockedAxis += 1}
+		if(y==4){lockedAxis += 1}
+		if(z==4){lockedAxis += 1}
+		
+		if(lockedAxis == 0){
+			var l = math.pow(soil, 1.0/3.0).toFloat
+			ps.box(l)
+			
+			//translate
+		}
+		
+		if(lockedAxis == 1){
+			if(x==4){
+			}
+			
+			if(y==4){
+			}
+			
+			if(z==4){
+			}
+		}
+		
+		if(lockedAxis == 2){
+			if(x==4){
+				if(y==4){
+				}
+				
+				if(z==4){
+				}
+			}
+			
+			if(y==4){
+				if(z==4){
+				}
+				
+				if(x==4){
+				}
+			}
+			
+			if(z==4){
+				if(x==4){
+				}
+				
+				if(y==4){
+				}
+			}
+		}
+		
+		
 	}
 
 	def SetNearCell(x: Int, y: Int, z: Int) = {
