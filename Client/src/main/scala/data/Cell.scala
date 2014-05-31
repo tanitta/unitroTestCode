@@ -31,52 +31,48 @@ class Cell{
 		if(x==4){lockedAxis += 1}
 		if(y==4){lockedAxis += 1}
 		if(z==4){lockedAxis += 1}
-		
-		if(lockedAxis == 0){
-			var l = math.pow(soil, 1.0/3.0).toFloat
-			ps.box(l)
-			
-			//translate
-		}
-		
-		if(lockedAxis == 1){
-			if(x==4){
-			}
-			
-			if(y==4){
-			}
-			
-			if(z==4){
-			}
-		}
-		
-		if(lockedAxis == 2){
-			if(x==4){
-				if(y==4){
-				}
+		lockedAxis match {
+			case 0 =>
+				var l = math.pow(soil, 1.0/3.0).toFloat
+				ps.box(l)
 				
-				if(z==4){
-				}
-			}
-			
-			if(y==4){
-				if(z==4){
-				}
+				//translate
 				
-				if(x==4){
-				}
-			}
-			
-			if(z==4){
+			case 1 =>
 				if(x==4){
 				}
 				
 				if(y==4){
 				}
-			}
+				
+				if(z==4){
+				}
+				
+			case 2 =>
+				if(x==4){
+					if(y==4){
+					}
+					
+					if(z==4){
+					}
+				}
+				
+				if(y==4){
+					if(z==4){
+					}
+					
+					if(x==4){
+					}
+				}
+				
+				if(z==4){
+					if(x==4){
+					}
+					
+					if(y==4){
+					}
+				}
 		}
-		
-		
 	}
 
 	def SetNearCell(x: Int, y: Int, z: Int) = {
