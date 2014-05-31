@@ -18,10 +18,6 @@ object Drawer{
 	
 	def Setup = {
 		ps.size(Env.ScreenSizeX,Env.ScreenSizeY,PConstants.OPENGL)
-		// camera = new PeasyCam(Env.ps,1000)//unitroClient.Camera(ps)
-		// camera.setMaximumDistance(1000)
-		// camera.setMinimumDistance(0)
-		
 		
 		ps.colorMode(PConstants.HSB, 100)
 		ps.background(0,0,100)
@@ -45,7 +41,6 @@ object Drawer{
 				var nearCellX:Int = 0
 				var nearCellY:Int = 0
 				var nearCellZ:Int = 0
-				
 				
 				if(nMat(i-1)(j)(k).soil>0 && nMat(i+1)(j)(k).soil>0){
 					nearCellX = 2

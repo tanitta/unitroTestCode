@@ -13,6 +13,19 @@ object Solver{
 	
 	def Setup = {
 		println(nMat)
+		nMat(1)(1)(1).soil = 0.2
+		nMat(2)(1)(1).soil = 0.3
+		nMat(3)(1)(1).soil = 0.5
+		
+		nMat(2)(1)(2).soil = 0.4
+		nMat(3)(1)(2).soil = 0.2
+		nMat(3)(2)(2).plant = new data.plants.Butterbur(nMat(3)(2)(2))
+		
+		nMat(2)(1)(3).soil = 0.6
+		nMat(2)(2)(3).soil = 0.5
+		
+		nMat(1)(1)(2).soil = 0.2
+		
 	}
 	
 	def Update = {

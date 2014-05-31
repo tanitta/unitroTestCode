@@ -1,6 +1,7 @@
 package unitroClient
 import unitroClient._
 import processing.core._
+import eyln.mqoloader._;
 
 object Main extends processing.core.PApplet {
 	Env.ps = this
@@ -11,6 +12,7 @@ object Main extends processing.core.PApplet {
 			nextLocalMatrix(i)(j)(k) = new unitroClient.data.Cell
 			
 	}}}
+	var body = new MQOModel(Env.ps); 
 	
 	override def setup(){
 		frameRate(30)

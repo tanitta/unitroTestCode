@@ -23,7 +23,7 @@ class Camera(var ps: processing.core.PApplet){
 	
 	def Update = {
 		rotate += (ps.pmouseX-ps.mouseX).toDouble*0.01
-		rotatex += (ps.pmouseY-ps.mouseY).toDouble*0.005
+		rotatex += (ps.pmouseY-ps.mouseY).toDouble*0.01
  		var x:Double = 20.0*math.cos(rotate)*math.cos(rotatex)
  		var z:Double = 20.0*math.sin(rotate)*math.cos(rotatex)
  		var y:Double = 20.0*math.sin(rotatex)
