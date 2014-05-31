@@ -2,6 +2,7 @@ package unitroClient
 import unitroClient._
 import processing.core._
 
+
 class Camera(var ps: processing.core.PApplet){
 	var fov = 0.04f		
 	var rotate = -1.0
@@ -30,38 +31,3 @@ class Camera(var ps: processing.core.PApplet){
  		ps.perspective(fov, Env.ScreenSizeX.toFloat/Env.ScreenSizeY.toFloat, 0.01f, 400.00f)			
 	}	
 }
-	
-// class Drawer(var ps: PApplet){
-// 	var camera = new Camera(ps)
-	
-// 	def setup = {
-// 		ps.size(Env.General.sizScreenX,Env.General.sizScreenY,PConstants.OPENGL)
-// 		// ps.colorMode(PConstants.HSB, 100)
-// 		// ps.background(0,0,100)
-// 		// ps.smooth()
-// 	}
-// 	def update = {}
-// 	def draw = {
-// 		ps.strokeWeight(1)
-// 		ps.background(0,0,100);
-// 		this.camera.update
-// 		ps.stroke(50)
-// 		//ps.box(1);
-// 		var size = 10
-// 		ps.stroke(0,0,100,30)
-// 		for(i <- -size to size){
-// 			// ps.line(i.toFloat/size.toFloat,0,-size.toFloat/size.toFloat,i.toFloat/size.toFloat, 0,size.toFloat/size.toFloat)
-// 			// ps.line(-size.toFloat/size.toFloat,0,i.toFloat/size.toFloat, size.toFloat/size.toFloat,0,i.toFloat/size.toFloat)
-			
-// 		}
-// 		ps.strokeWeight(4)	  
-// 		ps.stroke(0, 100, 100)
-// 		ps.line(0,0,0,1,0,0)
-		
-// 		ps.stroke(100/3, 100, 100)
-// 		ps.line(0,0,0,0,1,0)
-		
-// 		ps.stroke(100/3*2, 100, 100)
-// 		ps.line(0,0,0,0,0,1)
-// 	}
-// }

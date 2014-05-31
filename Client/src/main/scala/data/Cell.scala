@@ -1,33 +1,10 @@
 package unitroClient.data
 import unitroClient.data.plants._
 import unitroClient.data.items._
-
 import processing.core._
 
-object Cell{
-	def Setup(c: Cell) = {
-		
-	}
-	
-	def Update(c: Cell) = {
-		
-	}
-	
-	def Draw(c: Cell) = {
-		
-	}
 
-	def SetNearCell(c: Cell) = {
-		
-	}
-	
-	def GetSoil(c: Cell) = {
-		c.soil
-	}
-	
-	def SetSoil(c: Cell, s:Double) = {
-		c.soil = s
-	}
+object Cell{
 }
 
 class Cell{
@@ -38,6 +15,16 @@ class Cell{
 	var nutP:Double = 0
 	var nutN:Double = 0
 	var brightness:Double = 0
-	var plant = new BasePlant
+	var plant = new BasePlant(this)
 	var item = new BaseItem
+	
+	def Update = {
+		plant.Update
+	}
+	
+	def Draw = {
+	}
+
+	def SetNearCell(x: Int, y: Int, z: Int) = {
+	}
 }

@@ -1,20 +1,22 @@
 package unitroClient
 import processing.core._
 import unitroClient._
+
+
 object Drawer{
-	var ps = new processing.core.PApplet
+	var ps = Env.ps
 	var camera = new unitroClient.Camera(ps)
 	
 	type uniMatrix = Array[Array[Array[unitroClient.data.Cell]]]
 	var cMat = new uniMatrix(Env.ZoneSizeX,Env.ZoneSizeY,Env.ZoneSizeZ)
 	var nMat = new uniMatrix(Env.ZoneSizeX,Env.ZoneSizeY,Env.ZoneSizeZ)
-	def SetMatrix(cMAt: uniMatrix, nMAt: uniMatrix) = {
+	
+	def SetMatrix(cMat: uniMatrix, nMat: uniMatrix) = {
 		this.cMat = cMat
 		this.nMat = nMat
 	}
 	
-	def Setup(p: processing.core.PApplet) = {
-		this.ps = p
+	def Setup = {
 		camera = new unitroClient.Camera(ps)
 		ps.size(Env.ScreenSizeX,Env.ScreenSizeY,PConstants.OPENGL)
 		ps.colorMode(PConstants.HSB, 100)
@@ -27,8 +29,19 @@ object Drawer{
 	}
 	
 	def Draw = {
-		ps.strokeWeight(1)
 		ps.background(0,0,100);
+		DrawGrid
+		DrawMatrix
+	}
+	
+	def DrawMatrix = {
+		for(i <- 1 until nMat.length-1) {for( j <- 1 until nMat(0).length-1) {for( k <- 1 until nMat(0)(0).length-1) {
+			
+		}}}
+	}
+	
+	def DrawGrid = {
+		ps.strokeWeight(1)
 		
 		ps.stroke(50)
 		// ps.box(1);
